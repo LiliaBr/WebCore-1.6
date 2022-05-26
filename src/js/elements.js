@@ -1,0 +1,9 @@
+export const modalCall = document.querySelector('.modal-call');
+export const modalFeedback = document.querySelector('.modal-feedback');
+export const sidebar = document.querySelector('.sidebar');
+export const btnCall = document.querySelectorAll('.btn--search');
+export const btnFeedback = document.querySelectorAll('.btn--path');
+export const btnClose = document.querySelector('.js-modal-close');
+export const btnCloseF = document.querySelector('.js-modalF-close');
+export const overlay = document.getElementById('overlay');
+export const btnBurger = document.querySelector('.btn--burger');

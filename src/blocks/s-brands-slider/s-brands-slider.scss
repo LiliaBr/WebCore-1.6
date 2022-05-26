@@ -1,0 +1,128 @@
+@import '../../scss/mixin.scss';
+
+.s-brands-slider {
+
+  &__header {
+    @include section-header;
+  }
+}
+.s-brands-slider-container {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 24px;
+}
+
+.swiper-wrapper {
+  flex-wrap: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-wrapper {
+    flex-wrap: wrap;
+
+    &--brands-filed {
+      overflow: hidden;
+      max-height: 160px;
+      transition: max-height 1s linear;
+    }
+    &--brands-filed.is-collapsed {
+      max-height: 300px;
+    }
+  }
+}
+
+.swiper-pagination-bullets {
+  $this: &;
+  position: static;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-pagination-bullet {
+    display: none;
+  }
+}
+
+.card {
+
+  &__brand {
+    @include card-slider;
+    height: 72px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+  
+  &__img {
+    height: 100%;
+    width: 70%;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    &--lenovo {
+      background-image: url("../img/lenovo.svg");
+    }
+
+    &--samsung {
+      background-image: url("../img/samsung.svg");
+    }
+
+    &--apple {
+      background-image: url("../img/apple.svg");
+    }
+
+    &--sonic {
+      background-image: url("../img/viewSonic.svg");
+    }
+
+    &--bosch {
+      background-image: url("../img/bosch.svg");
+    }
+
+    &--hp {
+      background-image: url("../img/hp.svg");
+    }
+
+    &--acer {
+      background-image: url("../img/acer.svg");
+    }
+
+    &--sony {
+      background-image: url("../img/sony.svg");
+    }
+  }
+
+  &__btn {
+    @include round-btn (static);
+    background-image: url("../img/dropdown.svg");
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    &__brand {
+    margin-right: 16px;
+    margin-bottom: 8px;
+    }
+  }
+}
+
+
+.read-more {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  background-image: url("../img/icon__arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  margin-top: 24px;
+  display: none;
+  padding-left: 20px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .read-more {
+    display: block;
+  }
+}

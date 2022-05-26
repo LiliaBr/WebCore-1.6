@@ -1,0 +1,142 @@
+.s-prices-slider {
+
+  &__header {
+    @include section-header;
+  }
+  &__table-header-desktop {
+    display: none;
+  }
+  &__text-container {
+    width: 80%;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 24px 0 16px 0;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1120px) {
+    &__text-container {
+      width: 70%;
+    }
+  }
+  @media only screen and (min-width: 1120px) {
+    &__text-container {
+      width: 50%;
+    }
+  }
+  &__text-btn {
+    background-image: url("../img/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 15px;
+    text-align: start;
+    font-weight: 500;
+  }
+  &--btn {
+    display: none;
+  }
+}
+.s-prices-slider-container {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 24px;
+}
+
+.swiper-wrapper {
+  flex-wrap: nowrap;
+
+  &--prices-filed {}
+}
+
+@media only screen and (min-width: 768px) {
+  .s-prices-slider {
+    &__table-header-desktop {
+      display: grid;
+      grid-template-columns: 49% 15% 37%;
+      color: $color_6;
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 24px;
+    }
+    &__table-header-desktop p{
+      margin: 30px 0 16px 0;
+    }
+  }
+  .s-prices-slider-container{
+    padding-top: 0;
+  }
+  .swiper-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+    
+  &__prices {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    padding: 16px;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    width: 240px;
+    height: 200px;
+    flex-shrink: 0;
+    
+    &--servises p,
+    &--price p,
+    &--time p {
+      color: $color_6;
+      margin-bottom: 4px;
+    }
+
+    &--price {}
+
+    &--time {}
+
+    &--btn {
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 700;
+      text-align: start;
+      padding-left: 16px;
+      @include oval-btn (absolute);
+      background-image: url("../img/dropdown1.svg");
+      text-transform: uppercase;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .swiper-wrapper {
+    &--prices-filed {
+      display: block;
+      background-color: #FFFFFF;
+      border-radius: 6px;
+    }
+  }
+  .card{
+    &__prices {
+      display: grid;
+      padding-left: 0;
+      padding-right: 0;
+      grid-template-columns: 50% 15% 15% 20%;
+      border-radius: 0;
+      margin: 0;
+      align-items: center;
+      border-bottom: 1px $color_5 solid;
+      width: 95%;
+      height: 64px;
+      margin-left: 24px;
+
+      &--border {
+        border-bottom: #FFFFFF 1px solid;
+      }
+    }
+    &__prices p {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+
+@mixin card-slider {
+  border: 1px solid $color_5;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  width: 240px;
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+@mixin round-btn ($position) {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $color_2;
+  border-radius: 50%;  
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: $position;
+}
+
+@mixin section-header {
+    padding-left: 24px;
+    border-top: 2px solid $color_7;
+    padding: 15px 0 15px 0;
+    background: linear-gradient(270deg, #FFFFFF 0%,  #F8F8F8 98.61%);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+@mixin oval-btn ($position) {
+  width: 120px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $color_2;
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+  color: #FFFFFF;
+  position: $position;
+}

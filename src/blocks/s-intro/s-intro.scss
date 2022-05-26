@@ -1,0 +1,158 @@
+.s-intro {
+
+  &__container {
+  }
+  
+  &__wrapper-desktop {
+
+    &--btn {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 1120px) {
+    &__wrapper-desktop {
+      display: flex;
+      align-items: center;
+      &--btn {
+        align-items: center;
+        margin-left: auto;
+        display: flex;
+      }
+      &--btn span {
+        text-align: center;
+        margin-right: 16px;
+      }
+    }
+  }
+  &__title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 4px;
+    background-color: $color_3;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  &__menu {
+    margin-top: 24px;
+
+    &--link {
+      display: flex;
+      overflow: auto;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+    }
+    &--link::-webkit-scrollbar {
+      width: 0px;
+      background: rgba(255, 255, 255, 0);
+    }
+  }
+  &__menu::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  &__content-block {
+    
+    &--text {}
+
+    &__text p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__text p + p {
+      display: none;
+    }
+
+    #more {
+      display: none;
+    }
+    #more.open {
+      display: block;
+      transition: all 1s ease;
+    }
+  } 
+  &__img {
+    padding: 26px 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .s-intro {
+    &__menu {
+      &--link {
+
+      }
+    }
+    &__content-block {
+      margin-top: 24px;
+      display: flex;
+      
+      &--text {
+        margin-right: 24px;
+        width: 50%;
+      }
+      &--text p {
+        line-height: 20px;
+      }
+    }
+    
+    &__img {
+      border-radius: 5px;
+      margin-left: 24px;
+      width: 50%;
+    }
+    &__img img {
+      border-radius: 10px;
+    }
+  } 
+}
+@media only screen and (min-width: 1120px) {
+  .s-intro {
+    &__menu {
+      &--link {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+.link {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  display: flex;
+  margin-right: 7px;
+  padding: 8px 13px;
+  white-space: nowrap;
+
+  &:hover,
+  &--active {
+    border-color: $color_4;
+    background-color: #fff;
+    // margin-left: -40px;
+  }
+}
+
+.btn-read-more {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #000;
+  background-image: url("../img/icon__arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+
