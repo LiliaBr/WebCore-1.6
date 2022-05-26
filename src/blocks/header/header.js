@@ -1,7 +1,7 @@
-import {overlay, btnBurger, sidebar} from '../../js/elements.js';
+import {overlay, btnBurger, sidebar, btnClose, btnCloseF} from '../../js/elements.js';
 
 export const burgerMenu = () => {
-
+  
   overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
     sidebar.classList.remove('active');
