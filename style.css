@@ -346,7 +346,7 @@ body {
   font-family: "TT Lakes";
   background-color: #F8F8F8;
   min-width: 320px;
-  max-width: 1120px;
+  max-width: 1440px;
   height: 100%; }
 
 @media only screen and (min-width: 1120px) {
@@ -384,7 +384,7 @@ h3 {
   top: 0;
   bottom: 0;
   transition: opacity .5s;
-  z-index: 4; }
+  z-index: 3; }
   .overlay.active {
     opacity: 1;
     pointer-events: all;
@@ -400,7 +400,7 @@ h3 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  z-index: 5; }
+  z-index: 4; }
   .sidebar__header {
     display: flex;
     align-items: center;
@@ -560,10 +560,11 @@ h3 {
   .btn--burger {
     background-image: url(./static/icon__burger.svg);
     transition: transform 0.5s;
-    z-index: 5; }
+    z-index: 3; }
   .btn--burger.active {
     background-image: url(./static/icon__cross.svg);
-    transition: transform 0.5s; }
+    transition: transform 0.5s;
+    z-index: 4; }
   .btn--phone {
     background-image: url(./static/icon__phone.svg); }
   .btn--chat {
